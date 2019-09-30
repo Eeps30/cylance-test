@@ -2,28 +2,28 @@ import React, { Suspense } from 'react';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
 import Container from 'react-bootstrap/Container';
-import Repos from '../../components/repos/repos.component';
-const Overview = React.lazy(() =>
-  import('../../components/overview/overview.component')
+import Overview from '../../components/overview/overview.component';
+const Repos = React.lazy(() =>
+  import('../../components/repos/repos.component')
 );
 
 const Landing = () => {
   return (
     <Container>
       <Tabs
-        defaultActiveKey='profile'
+        defaultActiveKey='home'
         id='uncontrolled-tab-example'
         animation='true'
         mountOnEnter={true}
         unmountOnExit={false}
       >
         <Tab eventKey='home' title='Overview'>
-          <Suspense fallback={<div>Loading...</div>}>
-            <Overview />
-          </Suspense>
+          <Overview />
         </Tab>
         <Tab eventKey='profile' title='Repositories'>
-          <Repos />
+          <Suspense fallback={<div>Loading...</div>}>
+            <Repos />
+          </Suspense>
         </Tab>
       </Tabs>
     </Container>
