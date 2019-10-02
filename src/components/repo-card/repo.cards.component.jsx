@@ -13,7 +13,10 @@ const RepoCards = ({ fetchApiData, results }) => {
 
   return (
     <Container>
-      <RepoCard />
+      {/* <RepoCard /> */}
+      {results.map((card, index) => {
+        return <RepoCard />;
+      })}
     </Container>
   );
 };

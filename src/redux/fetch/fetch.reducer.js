@@ -1,7 +1,7 @@
 import { ApiTypes } from './fetch.types';
 
 const INITIAL_STATE = {
-  results: {}
+  results: []
 };
 
 const fetchDataReducer = (state = INITIAL_STATE, action) => {
