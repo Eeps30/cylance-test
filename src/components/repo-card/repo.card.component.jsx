@@ -2,7 +2,7 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 
 const RepoCard = props => {
-  const { name, description } = props;
+  const { name, description, forks } = props;
 
   return (
     <Card text='white' bg='secondary' style={{ width: '21rem' }}>
@@ -11,6 +11,7 @@ const RepoCard = props => {
         <Card.Text>
           {description !== null ? description : 'No Description...'}
         </Card.Text>
+        <Card.Text>Forks: {forks}</Card.Text>
       </Card.Body>
     </Card>
   );

@@ -34,6 +34,8 @@ const RepoCards = ({ fetchApiData, results }) => {
             key={card.id}
             name={card.name}
             description={card.description}
+            url={card.html_url}
+            forks={card.forks}
           />
         );
       })}
