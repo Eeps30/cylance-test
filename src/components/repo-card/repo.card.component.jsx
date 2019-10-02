@@ -1,21 +1,18 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col';
 
 const RepoCard = props => {
-  console.log('props in repoCARD: ', props.repos);
+  const { name, description } = props;
 
   return (
-    <Col lg={6} md={6} sm={10}>
-      <Card className='p4 shadow'>
-        <Card.Body>
-          <h4>Title</h4>
-          <p>Text</p>
-          <p>First Paragraph</p>
-          <p>Second Paragraph</p>
-        </Card.Body>
-      </Card>
-    </Col>
+    <Card text='white' bg='secondary' style={{ width: '21rem' }}>
+      <Card.Header>{name}</Card.Header>
+      <Card.Body>
+        <Card.Text>
+          {description !== null ? description : 'No Description...'}
+        </Card.Text>
+      </Card.Body>
+    </Card>
   );
 };
 
