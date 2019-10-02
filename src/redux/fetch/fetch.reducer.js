@@ -9,7 +9,7 @@ const fetchDataReducer = (state = INITIAL_STATE, action) => {
     case ApiTypes.FETCH_API_DATA:
       return {
         ...state,
-        results: action.payload
+        results: action.payload.data
       };
     default:
       return state;
