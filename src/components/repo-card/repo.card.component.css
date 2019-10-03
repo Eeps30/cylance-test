@@ -3,11 +3,18 @@
 }
 
 .margin {
-  margin-right: 20px;
+  margin-right: 12px;
 }
 
 #card {
   width: 21rem;
+  position: relative;
+}
+
+#github_content {
+  position: absolute;
+  bottom: -10px;
+  left: 20px;
 }
 
 #header_color {

@@ -18,7 +18,8 @@ const RepoCard = props => {
         <Card.Text>
           {description !== null ? description : 'No Description...'}
         </Card.Text>
-        <Row>
+        <br />
+        <Row id='github_content'>
           <Card.Text className='margin'>
             <Octicon icon={Star} ariaLabel='Starred' className='icon' />
             {stars}
