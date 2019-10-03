@@ -1,0 +1,22 @@
+#row {
+  margin-top: 30px;
+  background-color: #6c757d;
+  color: white;
+  padding: 25px 40px;
+}
+
+#row a {
+  padding-bottom: 15px;
+}
+
+#padding_top {
+  padding-top: 15px;
+}
+
+.row_icon {
+  margin-right: 7px;
+}
+
+.padding_right {
+  padding-right: 15px;
+}
