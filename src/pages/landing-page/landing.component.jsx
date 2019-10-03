@@ -4,7 +4,7 @@ import Tab from 'react-bootstrap/Tab';
 import Container from 'react-bootstrap/Container';
 import Overview from '../../components/overview/overview.component';
 const Repos = React.lazy(() =>
-  import('../../components/repos/repos.component')
+  import('../../components/repos-tab/repos.component')
 );
 
 const Landing = () => {
