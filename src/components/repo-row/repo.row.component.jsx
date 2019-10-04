@@ -9,13 +9,13 @@ import './repo.row.component.css';
 import '../repo-card/repo.card.component.css';
 
 const RepoRow = props => {
-  const { name, description, forks, stars, url } = props;
+  const { name, description, forks, stars, url, updated } = props;
 
   return (
     <Jumbotron id='row'>
       <Container>
         <Row>
-          <Col lg={8} id='column'>
+          <Col lg={10} md={9} sm={8} id='column'>
             <a
               href={url}
               target='_blank'
@@ -25,7 +25,12 @@ const RepoRow = props => {
               <h3>{name}</h3>
             </a>
           </Col>
-          <Col></Col>
+          <Col>
+            <Button variant='light'>
+              <Octicon icon={Star} ariaLabel='Starred' className='row_icon' />
+              Star
+            </Button>
+          </Col>
         </Row>
         <Row>
           <p>{description}</p>
@@ -36,6 +41,7 @@ const RepoRow = props => {
             <span className='margin'>{stars}</span>
             <Octicon icon={RepoForked} ariaLabel='Forks' className='row_icon' />
             <span className='margin'>{forks}</span>
+            <span>Updated On {updated}</span>
           </div>
         </Row>
       </Container>

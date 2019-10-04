@@ -30,6 +30,7 @@ const RepoRows = ({ results }) => {
             forks={card.forks}
             stars={card.stargazers_count}
             url={card.html_url}
+            updated={card.updated_at.slice(0, 10)}
           />
         );
       })}
