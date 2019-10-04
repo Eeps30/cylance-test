@@ -22,8 +22,6 @@ const RepoCards = ({ fetchApiData, results }) => {
     }
   });
 
-  console.log('sortedResults: ', sortedResults);
-
   //use repo.card.component to create elements
   //needed on Overview tab
   return (

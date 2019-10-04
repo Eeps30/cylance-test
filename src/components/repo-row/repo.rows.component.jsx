@@ -5,16 +5,25 @@ import { connect } from 'react-redux';
 import './repo.rows.component.css';
 
 const RepoRows = ({ results }) => {
+  const [input, setInput] = useState('');
+
+  let filteredResults = results.filter(
+    d => input === '' || d.name.includes(input)
+  );
+
   //use repo.row.component to create row element
   //for each entry in results array
   return (
     <div>
       <Form id='form_margin'>
         <Form.Group>
-          <Form.Control placeholder='Find a repository...' />
+          <Form.Control
+            placeholder='Find a repository...'
+            onChange={event => setInput(event.target.value)}
+          />
         </Form.Group>
       </Form>
-      {results.map((card, index) => {
+      {filteredResults.map((card, index) => {
         return (
           <RepoRow
             key={card.id}
