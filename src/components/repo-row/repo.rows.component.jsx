@@ -7,9 +7,7 @@ import './repo.rows.component.css';
 const RepoRows = ({ results }) => {
   const [input, setInput] = useState('');
 
-  let filteredResults = results.filter(
-    d => input === '' || d.name.includes(input)
-  );
+  const filteredResults = results.filter(object => object.name.includes(input));
 
   //use repo.row.component to create row element
   //for each entry in results array

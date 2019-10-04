@@ -2,6 +2,8 @@ import React from 'react';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Jumbotron from 'react-bootstrap/Jumbotron';
+import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
 import Octicon, { RepoForked, Star } from '@primer/octicons-react';
 import './repo.row.component.css';
 import '../repo-card/repo.card.component.css';
@@ -13,14 +15,17 @@ const RepoRow = props => {
     <Jumbotron id='row'>
       <Container>
         <Row>
-          <a
-            href={url}
-            target='_blank'
-            rel='noopener noreferrer'
-            className='header_color'
-          >
-            <h3>{name}</h3>
-          </a>
+          <Col lg={8} id='column'>
+            <a
+              href={url}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='header_color'
+            >
+              <h3>{name}</h3>
+            </a>
+          </Col>
+          <Col></Col>
         </Row>
         <Row>
           <p>{description}</p>
