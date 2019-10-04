@@ -13,7 +13,12 @@ const RepoRow = props => {
     <Jumbotron id='row'>
       <Container>
         <Row>
-          <a href={url} target='_blank' className='header_color'>
+          <a
+            href={url}
+            target='_blank'
+            rel='noopener noreferrer'
+            className='header_color'
+          >
             <h3>{name}</h3>
           </a>
         </Row>

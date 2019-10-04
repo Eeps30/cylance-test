@@ -10,7 +10,12 @@ const RepoCard = props => {
   return (
     <Card text='white' bg='secondary' id='card'>
       <Card.Header>
-        <a href={url} target='_blank' className='header_color'>
+        <a
+          href={url}
+          target='_blank'
+          rel='noopener noreferrer'
+          className='header_color'
+        >
           {name}
         </a>
       </Card.Header>
