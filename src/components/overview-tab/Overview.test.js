@@ -14,7 +14,6 @@ describe('Overview Tab Component', () => {
   });
 
   it('Should render without errors', () => {
-    console.log(component.debug());
     expect(component.find('#popular_repositories').length).toBe(1);
   });
 
