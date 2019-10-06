@@ -10,7 +10,6 @@
 ### Running Test suite with Jest and Enzyme:
 
 - Execute `npm run test` to start testing suite
-- Once framework is initialized, press the `a` key on your keyboard to run all test files in the project
 
 ### Libraries used:
 
