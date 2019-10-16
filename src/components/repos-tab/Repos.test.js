@@ -1,13 +1,13 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import RepoRow from './repo.row.component';
+import Repos from './repos.component';
 
 const setUp = (props = {}) => {
-  const component = shallow(<RepoRow {...props} />);
+  const component = shallow(<Repos {...props} />);
   return component;
 };
 
-describe('RepoRow Component', () => {
+describe('Repos Tab Component', () => {
   let component;
   beforeEach(() => {
     component = setUp();

@@ -6,13 +6,12 @@ import Badge from 'react-bootstrap/Badge';
 import Overview from '../../components/overview-tab/overview.component';
 import { connect } from 'react-redux';
 import './landing.component.css';
+//lazy load Repos component
 const Repos = React.lazy(() =>
   import('../../components/repos-tab/repos.component')
 );
 
 const Landing = ({ results }) => {
-  const resultsLength = results.length;
-
   return (
     <Container>
       <Tabs
@@ -31,7 +30,7 @@ const Landing = ({ results }) => {
             <span>
               Repositories
               <Badge variant='light' id='margin_left'>
-                {resultsLength}
+                {results.length}
               </Badge>
             </span>
           }
@@ -45,6 +44,7 @@ const Landing = ({ results }) => {
   );
 };
 
+//pull in results state from Redux
 const mapStateToProps = ({ fetch: { results } }) => ({
   results
 });

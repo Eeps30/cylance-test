@@ -13,9 +13,8 @@ describe('RepoCard Component', () => {
     component = setUp();
   });
 
-  it('It should render without errors', () => {
-    const card = component.find('#card');
-    expect(card.length).toBe(1);
+  it('Should render without errors', () => {
+    expect(component.exists()).toBe(true);
   });
 
   it('Should contain two icons', () => {

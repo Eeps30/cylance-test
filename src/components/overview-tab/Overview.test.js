@@ -14,7 +14,7 @@ describe('Overview Tab Component', () => {
   });
 
   it('Should render without errors', () => {
-    expect(component.find('#popular_repositories').length).toBe(1);
+    expect(component.exists()).toBe(true);
   });
 
   it('Should contain text inside tab', () => {

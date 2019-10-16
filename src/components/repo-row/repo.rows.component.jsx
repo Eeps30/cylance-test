@@ -5,8 +5,11 @@ import { connect } from 'react-redux';
 import './repo.rows.component.css';
 
 const RepoRows = ({ results }) => {
+  //create hook that keeps track of how many rows to show
+  //that match the user's text input
   const [input, setInput] = useState('');
 
+  //filter shown repos based on user text input
   const filteredResults = results.filter(object => object.name.includes(input));
 
   //use repo.row.component to create row element
@@ -38,6 +41,7 @@ const RepoRows = ({ results }) => {
   );
 };
 
+//pull in results state from Redux
 const mapStateToProps = ({ fetch: { results } }) => ({
   results
 });

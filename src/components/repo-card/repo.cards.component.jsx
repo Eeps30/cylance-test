@@ -42,6 +42,7 @@ const RepoCards = ({ fetchApiData, results }) => {
   );
 };
 
+//pull in results state from Redux
 const mapStateToProps = ({ fetch: { results } }) => ({
   results
 });

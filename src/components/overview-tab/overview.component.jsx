@@ -5,6 +5,7 @@ import './overview.component.css';
 
 const Overview = () => {
   return (
+    //Container for RepoCards component
     <Container>
       <h4 id='popular_repositories'>Popular Repositories</h4>
       <RepoCards />
